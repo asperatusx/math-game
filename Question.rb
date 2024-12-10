@@ -6,8 +6,8 @@ class Question
   end
 
   def ask(player) 
-    rand1 = rand(20)
-    rand2 = rand(20)
+    rand1 = rand(1..20)
+    rand2 = rand(1..20)
     @answer = rand1 + rand2
     puts @question = "#{player.name}: What does #{rand1} plus #{rand2} equal?"
     user_input = gets.to_i
