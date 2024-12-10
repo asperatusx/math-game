@@ -13,9 +13,9 @@ class Game
   def start_turn
     question = Question.new
     question.ask(@current_player)
-    players_score
 
     if @current_player.is_alive?
+      players_score
       next_player
     else
       announce_winner
@@ -38,15 +38,9 @@ class Game
 
   def announce_winner
     next_player
-    puts "#{@current_player.name} wins with a score of #{@current_player.lives}/3"
     puts "----- GAME OVER -----"
+    puts "#{@current_player.name} wins with a score of #{@current_player.lives}/3!"
     puts "Good bye!"
   end
-
 end
 
-newGame = Game.new('player1', 'player2')
-
-loop do
-  newGame.start_turn
-end
