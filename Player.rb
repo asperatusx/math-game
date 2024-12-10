@@ -14,6 +14,3 @@ class Player
     @lives > 0
   end
 end
-
-player1 = Player.new('Jon')
-puts player1.name
