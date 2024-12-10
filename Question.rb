@@ -9,7 +9,7 @@ class Question
     rand1 = rand(20)
     rand2 = rand(20)
     @answer = rand1 + rand2
-    puts @question = "What does #{rand1} plus #{rand2} equal?"
+    puts @question = "#{player.name}: What does #{rand1} plus #{rand2} equal?"
     user_input = gets.to_i
     check_answer(user_input, player)
   end
